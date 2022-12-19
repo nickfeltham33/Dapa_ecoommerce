@@ -1,0 +1,98 @@
+.container {
+  width: 90%;
+  margin: 2em auto 5em;
+  .products__wrap {
+    min-height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    .title__wrap {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-bottom: 2px solid var(--color-two);
+      margin: 5em 0;
+      padding: 5em 0 2em;
+      position: sticky;
+      top: 50px;
+      background-color: var(--color-one);
+      z-index: 99;
+      @media screen and (max-width: 900px) {
+        top: 60px
+      }
+      .products__title {
+        font-size: 3em;
+      }
+      .search__bar {
+        width: 48%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: 1px solid var(--color-two);
+        .search__icon {
+          height: 15px;
+          margin-left: 10px;
+        }
+        .search__text {
+          margin-left: 15px;
+          font-size: 1.6em;
+          font-family: inconsolata;
+        }
+      }
+    }
+    .grid__container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 5em;
+      justify-content: center;
+      align-content: center;
+      grid-auto-rows: minmax(100px, auto);
+      margin-bottom: 15em ;
+      @media screen and (max-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media screen and (max-width: 748px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .product__card { 
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-family: inconsolata;
+      cursor: crosshair;
+      .img__wrap {
+        overflow: hidden;
+        .product__img {
+          width: 100%;
+          transition: 500ms ease;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+    .detail__wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 1.5em 0;
+      font-family: inconsolata;
+      .product__name {
+        font-size: 2em;
+        font-variation-settings: "wght" 500;
+      }
+      .product__price {
+        font-size: 1.5em;
+      }
+    }
+  }
+}

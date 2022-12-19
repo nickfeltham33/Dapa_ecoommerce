@@ -1,0 +1,28 @@
+button {
+  .btn {
+    letter-spacing: 5px;
+    padding: 15px 5em;
+    border: 1px var(--color-two) solid;
+    transition: 250ms ease-out;
+    margin: 2em;
+    font-family: notable;
+    white-space: nowrap;
+    @media screen and (max-width: 748px) {
+      font-size: 0.8em;
+    }
+  }
+
+  .landing__btn {
+    color: var(--color-one);
+    border: 1px var(--color-one) solid;
+    background-color: rgba(0,0,0,0.2);
+    position: absolute;
+    bottom: 2em;
+    left: 50%;
+    transform: translateX(-55%);
+    z-index: 3;
+    &:hover {
+      background-color: var(--color-four);
+    }
+  }
+}

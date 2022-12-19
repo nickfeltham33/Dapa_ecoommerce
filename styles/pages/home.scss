@@ -1,0 +1,86 @@
+.landing__wrap {
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  @media screen and (max-width: 900px) {
+    min-height: 100vw;
+  }
+  .landing__inner__wrap {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 1024px) {
+      height: 80vw;
+    }
+    @media screen and (max-width: 748px) {
+      min-height: 400px;
+    }
+    .landing__img__wrap {
+      height: 100%;
+      width: 90%;
+      max-width:1760px;
+      margin: 10vh auto 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      .landing__bg__img {
+        width: 100%;
+      }
+      .landing__btn {
+        position:absolute;
+        left: 35%;
+        bottom: 10%;
+        padding:15px 20px;
+        width: 30%;
+        font-family: notable;
+        background-color: rgba(0,0,0,0.4);
+        border: 1px solid var(--color-one);
+        color: var(--color-one);
+        letter-spacing: 0.1em;
+        transition: 200ms ease;
+        &:hover {
+          background-color: var(--color-four);
+        }
+      }
+    }
+    .scroll__text {
+      position: absolute;
+      bottom: -0.85em;
+      font-size: 15em;
+      white-space: nowrap;
+      color: black;
+      z-index: -1;
+      &.overlay {
+        -webkit-text-stroke: 0.001em black;
+        -webkit-text-fill-color: transparent;
+        z-index: 2;
+      }
+      @keyframes scrollText {
+        from   { transform: translateX(0%); }
+        to { transform: translateX(-100%); }
+      }
+    }
+  }
+  .landing__lower__wrap {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .landing__lower__title {
+      font-size: 4em;
+      margin-bottom: 2em;
+    }
+    .search__wrap {
+      width: 60em;
+      .search__bar {
+        width: 100%;
+        font-family: inconsolata;
+      }
+    }
+  }
+}
