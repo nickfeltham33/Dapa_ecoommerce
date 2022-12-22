@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layout } from '../components';
 
-import '../styles/index.scss'
+import '../styles/index.scss';
 
 function MyApp({ Component, pageProps }) {
   return ( 

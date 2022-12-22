@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import { urlFor } from '../lib/client';
 
+
+
 const LandingHero = ({ landingHero }) => {
   return (
     <div className="landing__wrap">
@@ -13,15 +15,8 @@ const LandingHero = ({ landingHero }) => {
             </button>
           </Link>
         </div>
-        <h1 className="scroll__text overlay">{landingHero.scrollText}</h1>
-        <p className="scroll__text">{landingHero.scrollText}</p>
-      </div>
-      <div className="landing__lower__wrap">
-        <div className="landing__lower__title">DAPA DOGZ</div>
-        <div className="search__wrap">
-          <input type="text" className="search__bar" placeholder="Search..."/>
-          <input type="text" placeholder="&#xF002; Search" style="font-family:inconsolata, FontAwesome" />
-        </div>          
+        <h1 className="scroll__text ">DESIGNER INSPIRED</h1>
+        <p className="scroll__text overlay">DESIGNER INSPIRED</p>
       </div>
     </div>
   )

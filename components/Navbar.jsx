@@ -4,13 +4,14 @@ import { AiOutlineShopping } from 'react-icons/ai';
 import { urlFor } from '../lib/client';
 
 
-const Navbar = ({logo: {logoImg, logoText}}) => {
+const Navbar = () => {
   return (
     <div className="nav__wrap">
       <div className="nav__left__wrap">
         <div className="nav__logo__wrap">
-          <img className="logo__img" src={urlFor(logoImg)} />
-          <p className="logo__text">{logoText}</p>
+          <Link href="/">
+            <p className="logo__text">Dapa Dogz</p>
+          </Link>
         </div>
       </div>
       <div className="nav__right__wrap">

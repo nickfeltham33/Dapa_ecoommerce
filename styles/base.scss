@@ -3,12 +3,10 @@
   --color-two: #161616;
   --color-three: #d73737;
   --color-four: #ffcc00;
-  --small: 375px;
-  --medium: 900px;
 }
 
 html {
-  font-size: calc(100vw / 1920 * 10);
+  font-size: calc(15px + 0.390625vw);
   scroll-behavior: smooth;
 }
 
@@ -34,6 +32,16 @@ main {
 body {
   font-family: notable;
   color: var(--color-two);
+}
+
+.main__container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.products__width__90 {
+  width: 90%;
+  margin: 0 auto;
 }
 
 

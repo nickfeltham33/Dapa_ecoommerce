@@ -1,5 +1,5 @@
-.container {
-  width: 90%;
+.products__container {
+  width: 100%;
   margin: 2em auto 5em;
   .products__wrap {
     min-height: 10vh;
@@ -24,7 +24,7 @@
         top: 60px
       }
       .products__title {
-        font-size: 3em;
+        font-size: 3rem;
       }
       .search__bar {
         width: 48%;
@@ -38,7 +38,7 @@
         }
         .search__text {
           margin-left: 15px;
-          font-size: 1.6em;
+          font-size: 1.6rem;
           font-family: inconsolata;
         }
       }
@@ -60,7 +60,7 @@
       }
     }
     .product__card { 
-      height: 100%;
+      height: 90%;
       width: 100%;
       display: flex;
       align-items: center;
@@ -84,14 +84,16 @@
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      padding: 1.5em 0;
+      padding: 0 0 2em;
       font-family: inconsolata;
+      margin-bottom: 2em;
       .product__name {
-        font-size: 2em;
+        font-size: 2rem;
         font-variation-settings: "wght" 500;
+        width: 70%;
       }
       .product__price {
-        font-size: 1.5em;
+        font-size: 1.5rem;
       }
     }
   }
