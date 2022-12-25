@@ -1,22 +1,87 @@
 import React from 'react';
 import Link from 'next/link';
 import { urlFor } from '../lib/client';
+import { AiOutlineArrowDown } from 'react-icons/ai';
 
 
 
 const LandingHero = ({ landingHero }) => {
   return (
     <div className="landing__wrap">
-      <div className="landing__inner__wrap">
-        <div className="landing__img__wrap">
-          <img className="landing__bg__img" src={urlFor(landingHero.image)} alt="fashionable doggo in a flashy hoodie top"/>
+      <div className="left__wrap">
+        <div className="landing__text__wrap">
+          <h1 className="title__text__upper">DESIGNER INSPIRED<br/>
+          <span className="title__secondary">FASHION FOR</span>
+          <span className='title__text__lower'><br/>DAPA DOGZ</span>
+          </h1>
           <Link href="#products">
-            <button className="btn landing__btn">{landingHero.buttonText}
-            </button>
+            <button className="landing__btn">SHOP NOW</button>
           </Link>
         </div>
-        <h1 className="scroll__text ">DESIGNER INSPIRED</h1>
-        <p className="scroll__text overlay">DESIGNER INSPIRED</p>
+        <Link href="/products">
+          <div className="landing__center__btn">
+            <AiOutlineArrowDown />
+          </div>
+        </Link>
+      </div>
+      <div className="right__wrap">
+        <img className='landing__img' src={urlFor(landingHero.image)}/>
+      </div>
+      <div className="marquee__wrap__starter underlay">
+        <div className="marquee__starter"> 
+          <span className="scroll__text">DESIGNER</span>
+          <span className="scroll__text">INSPIRED</span>
+          <span className="scroll__text">FASHION</span>
+          <span className="scroll__text">FOR</span>
+          <span className="scroll__text">DAPA</span>
+          <span className="scroll__text">DOGZ</span>
+        </div>
+      </div>    
+      <div className="marquee__wrap__starter overlay">
+        <div className="marquee__starter"> 
+          <span className="scroll__text">DESIGNER</span>
+          <span className="scroll__text">INSPIRED</span>
+          <span className="scroll__text">FASHION</span>
+          <span className="scroll__text">FOR</span>
+          <span className="scroll__text">DAPA</span>
+          <span className="scroll__text">DOGZ</span>
+        </div>
+      </div>    
+      <div className="marquee__wrap underlay">
+        <div className="marquee"> 
+          <span className="scroll__text">DESIGNER</span>
+          <span className="scroll__text">INSPIRED</span>
+          <span className="scroll__text">FASHION</span>
+          <span className="scroll__text">FOR</span>
+          <span className="scroll__text">DAPA</span>
+          <span className="scroll__text">DOGZ</span>
+        </div>
+        <div className="marquee marquee2"> 
+          <span className="scroll__text">DESIGNER</span>
+          <span className="scroll__text">INSPIRED</span>
+          <span className="scroll__text">FASHION</span>
+          <span className="scroll__text">FOR</span>
+          <span className="scroll__text">DAPA</span>
+          <span className="scroll__text">DOGZ</span>          
+        </div>
+      </div>
+      <div className="marquee__wrap overlay">
+        <div className="marquee"> 
+          <span className="scroll__text">DESIGNER</span>
+          <span className="scroll__text">INSPIRED</span>
+          <span className="scroll__text">FASHION</span>
+          <span className="scroll__text">FOR</span>
+          <span className="scroll__text">DAPA</span>
+          <span className="scroll__text">DOGZ</span>
+        </div>
+        <div className="marquee marquee2"> 
+          <span className="scroll__text">DESIGNER</span>
+          <span className="scroll__text">INSPIRED</span>
+          <span className="scroll__text">FASHION</span>
+          <span className="scroll__text">FOR</span>
+          <span className="scroll__text">DAPA</span>
+          <span className="scroll__text">DOGZ</span>          
+        </div>
       </div>
     </div>
   )

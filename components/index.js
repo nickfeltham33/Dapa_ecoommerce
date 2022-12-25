@@ -6,3 +6,4 @@ export { default as Layout } from './Layout.jsx';
 export { default as Navbar } from './Navbar.jsx';
 export { default as Product } from './Product.jsx';
 export { default as Products } from './Products.jsx';
+export { default as ProductsLatest } from './ProductsLatest.jsx';

@@ -14,7 +14,6 @@
     "@sanity/client": "^3.4.1",
     "@sanity/image-url": "^1.0.1",
     "@stripe/stripe-js": "^1.25.0",
-    "framer-motion": "^7.10.3",
     "next": "12.1.0",
     "next-sanity-image": "^3.2.1",
     "react": "17.0.2",
@@ -27,5 +26,10 @@
     "@babel/preset-react": "^7.16.7",
     "eslint": "8.13.0",
     "eslint-config-next": "12.1.4"
+  },
+  "browser": {
+    "fs": false,
+    "os": false,
+    "path": false
   }
 }

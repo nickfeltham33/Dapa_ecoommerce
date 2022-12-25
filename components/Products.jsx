@@ -10,6 +10,7 @@ const Products = ({products}) => {
               <h2 className="products__title">Latest Additions</h2>
             </div>
             <div className="grid__container">
+              
               {products?.map(
                 (product) => <Product key={product._id} product={product} />)}
             </div>

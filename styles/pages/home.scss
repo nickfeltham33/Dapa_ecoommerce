@@ -1,5 +1,5 @@
 .landing__wrap {
-  min-height: 100vh;
+  min-height: 65vh;
   width: 100%;
   overflow: hidden;
   @media screen and (max-width: 900px) {
@@ -7,17 +7,12 @@
   }
   .landing__inner__wrap {
     width: 100%;
-    height: 60vh;
+    height: 50vh;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    @media screen and (max-width: 1024px) {
-      height: 80vw;
-    }
-    @media screen and (max-width: 748px) {
-      min-height: 400px;
-    }
+
     .landing__img__wrap {
       height: 100%;
       width: 90%;
@@ -29,40 +24,43 @@
       .landing__bg__img {
         width: 100%;
       }
-      .landing__btn {
-        position:absolute;
-        left: 35%;
-        bottom: 10%;
-        padding:15px 20px;
-        width: 30%;
-        font-family: notable;
-        background-color: rgba(0,0,0,0.4);
-        border: 1px solid var(--color-one);
-        color: var(--color-one);
-        letter-spacing: 0.1rem;
-        transition: 200ms ease;
-        &:hover {
-          background-color: var(--color-four);
-        }
-      }
     }
-    .scroll__text {
+    .marquee__wrap {
+      overflow: hidden;
       position: absolute;
-      bottom: -0.75em;
-      font-size: 15rem;
-      white-space: nowrap;
-      color: var(--color-two);
-      z-index: -1;
-      &.overlay {
-        z-index: 2;
-        mix-blend-mode: exclusion;
-        color: var(--color-one);
-        // -webkit-text-stroke: 1px var(--color-two);
-        // color: transparent;
-      }
-      @keyframes scrollText {
-        from   { transform: translateX(0%); }
-        to { transform: translateX(-100%); }
+      width: 100%;
+      height: 100vh;
+      bottom: -12em;
+      z-index: 99;
+      mix-blend-mode: luminosity;
+        .marquee {
+          bottom: 0;
+          left: 0;
+          width: auto;
+          position: absolute;
+          white-space: nowrap;
+          animation: marquee 30s linear infinite;
+          &.marquee2 {
+            left: 100%;
+            animation-delay: 15s;
+          }
+        .scroll__text {
+          bottom: 0;
+          margin-right: 0.5em;
+          font-size: 15rem;
+          white-space: nowrap;
+          color: var(--color-two);
+          z-index: 2;
+          -webkit-text-stroke: 1px var(--color-one);
+          @keyframes marquee {
+            0% {
+              left: 100%;
+            }
+            100% {
+              left: -375%;
+            }
+          }
+        }
       }
     }
   }

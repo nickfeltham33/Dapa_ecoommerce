@@ -2,15 +2,16 @@ import React from 'react';
 import { Product } from '../components';
 
 
-const ProductsLatest = ({latestProducts}) => {
+const Products = ({products}) => {
   return (
         <div className="products__container" id="products">
           <div className="products__wrap">
             <div className="title__wrap">
               <h2 className="products__title">Latest Additions</h2>
             </div>
+            {console.log(products)}
             <div className="grid__container">
-              {latestProducts?.slice(0,4).map(
+              {products?.map(
                 (product) => <Product key={product._id} product={product} />)}
             </div>
           </div>
@@ -18,4 +19,4 @@ const ProductsLatest = ({latestProducts}) => {
       )
 }
 
-export default ProductsLatest
+export default Products

@@ -1,12 +1,14 @@
 :root {
 	--color-one: #ffffff;
   --color-two: #161616;
-  --color-three: #d73737;
+  --color-three: #08DB8F;
   --color-four: #ffcc00;
+  --color-five: #7c08db;
+  --color-six: #de0073;
 }
 
 html {
-  font-size: calc(15px + 0.390625vw);
+  font-size: calc(16px + 0.390625vw);
   scroll-behavior: smooth;
 }
 
@@ -36,7 +38,7 @@ body {
 
 .main__container {
   width: 90%;
-  margin: 0 auto;
+  margin: 10vw auto;
 }
 
 .products__width__90 {
@@ -44,5 +46,10 @@ body {
   margin: 0 auto;
 }
 
+.e-toast-container .e-toast .e-toast-message .e-toast-title {
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+}
 
 

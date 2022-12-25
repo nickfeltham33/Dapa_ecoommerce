@@ -37,13 +37,11 @@
     flex-direction: row;
     align-items: center;
     .nav__cart__wrap {
-      width: 4em;
-      margin-right: 40px;
       border: none;
       position: relative;
       background-color: transparent;
       .cart__icon{
-        font-size: 45px;
+        font-size: 30px;
         color: var(--color-two);
         top: 0.05em;
         cursor: pointer;
@@ -57,8 +55,8 @@
       }
       .cart__item__qty{
         position: absolute;
-        right: 0px;
-        bottom: 10px;
+        left: 0px;
+        bottom: 0px;
         font-size: 12px;
         color: var(--color-two);
         background-color: var(--color-four);

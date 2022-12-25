@@ -1,10 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
-import { AiOutlineShopping } from 'react-icons/ai';
+import { BsBag } from 'react-icons/bs';
 import { urlFor } from '../lib/client';
 
+import { Cart } from './';
+import { useStateContext} from '../context/StateContext';
 
 const Navbar = () => {
+  const { showCart, setShowCart, totalQuantities } = useStateContext();
+
   return (
     <div className="nav__wrap">
       <div className="nav__left__wrap">
@@ -15,18 +19,14 @@ const Navbar = () => {
         </div>
       </div>
       <div className="nav__right__wrap">
-          <button type="button" className="nav__cart__wrap">
-            <div className="cart__icon">
-              <AiOutlineShopping />
-            </div>
-            <span className="cart__item__qty">1</span>
-          </button>
-          <div className="nav__btn__wrap">
-            <div className="nav__btn__bar"></div>
-            <div className="nav__btn__bar"></div>
-            <div className="nav__btn__bar"></div>
+        <button type="button" className="nav__cart__wrap" onClick={() => setShowCart(true)}>
+          <div className="cart__icon">
+            <BsBag />
           </div>
-        </div>
+          <span className="cart__item__qty">{totalQuantities}</span>
+        </button>
+      </div>
+      {showCart && <Cart />}
     </div>
   )
 }
