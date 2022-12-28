@@ -4,11 +4,17 @@
 
 //pages
 @import './pages/products.scss';
-@import './pages/home.scss';
+// @import './pages/home.scss';
 @import './pages/product.scss';
+@import './pages/landinghero.scss';
+@import './pages/landingheroprods.scss';
 
-//partials
-@import './partials/global.scss';
+
+
+//components
 @import './partials/nav.scss';
 @import './partials/footer.scss';
+@import './partials/cart.scss';
+//partials
+@import './partials/global.scss';
 @import './partials/banner.scss';

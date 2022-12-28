@@ -2,7 +2,7 @@ import React from 'react';
 import { Product } from '../components';
 
 
-const Products = ({products}) => {
+const ProductsLatest = ({latestProducts}) => {
   return (
         <div className="products__container" id="products">
           <div className="products__wrap">
@@ -10,8 +10,7 @@ const Products = ({products}) => {
               <h2 className="products__title">Latest Additions</h2>
             </div>
             <div className="grid__container">
-              
-              {products?.map(
+              {latestProducts?.slice(0,4).map(
                 (product) => <Product key={product._id} product={product} />)}
             </div>
           </div>
@@ -19,4 +18,4 @@ const Products = ({products}) => {
       )
 }
 
-export default Products
+export default ProductsLatest

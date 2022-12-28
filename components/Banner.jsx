@@ -5,8 +5,7 @@ import { urlFor } from '../lib/client';
 
 const Banner = ({ banner: { image, buttonText, smallText, largeText } }) => {
   return (
-    <div>
-      <Link href="">
+
         <div className="banner__wrap">
           <img className="banner__img" src={urlFor(image)} />
           <div className="banner__text__wrap">
@@ -15,8 +14,6 @@ const Banner = ({ banner: { image, buttonText, smallText, largeText } }) => {
             <button className="btn banner__btn">{buttonText}</button>
           </div>
         </div>
-      </Link>
-    </div>
   )
 }
 

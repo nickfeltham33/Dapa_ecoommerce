@@ -23,6 +23,8 @@
       position: relative;
       left: -100px;
       .footer__left__img {
+        height: 100%;
+        width: auto;
         position: absolute;
         right: 0;
         top: -8vw;
@@ -127,6 +129,8 @@
       top: -5em;
       right: -100px;    
       .footer__right__img {
+        height: 100%;
+        width: auto;
         position: absolute;
         left: 0;
         top: -8vw;

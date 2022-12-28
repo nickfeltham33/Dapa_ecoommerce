@@ -1,18 +1,24 @@
 import React from 'react';
 import Head from 'next/head';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
-const layout = ({ children }) => {
+const Layout = ({ children }) => {
   return (
     <div className="layout">
-      <Head>
-        <title>Dapa Dogz - Designer Inspired Fashion</title>
-      </Head>
-      <main className="main__container">
-        {children}
+      <header>
+        <Navbar />
+      </header>
+      
+      <main>
+        {children} 
       </main>
+      
+      <footer>
+        <Footer />
+      </footer>
     </div>
   )
 }
 
-export default layout
+export default Layout

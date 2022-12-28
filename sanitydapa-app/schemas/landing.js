@@ -11,6 +11,14 @@ export default {
               hotspot: true,
           },
       },
+            {
+          name: 'imageAlt',
+          title: 'ImageALt',
+          type: 'image',
+          options: {
+              hotspot: true,
+          },
+      },
       {
           name: 'buttonText',
           title: 'ButtonText',
