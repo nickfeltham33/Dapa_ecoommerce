@@ -19,6 +19,23 @@
     @media screen and (max-width: 476px) {
       
     }
+    .nav__page__wrap {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0 2em;
+      .nav__link__text {
+        font-family: inconsolata;
+        font-size: 2.4em;
+        margin: 0 0 1em;
+        text-align: right;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.8;
+          text-decoration: underline;
+        }
+      }
+    }
     .landing__text__wrap {
       margin-bottom: 50px;
       padding: 5em;

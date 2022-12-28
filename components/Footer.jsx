@@ -21,6 +21,7 @@ const Footer = () => {
               <h2 className="form__title">SIGN UP TO OUR NEWSLETTER</h2>
               <p className="form__subtitle">TO GET 10% DISCOUNT ONALL PRODUCTS</p>
               <div className="form__inner__wrap">
+                
                 <input type="text" className="form__input" placeholder="Email" name="email" require="" />
                 <button className="signup__btn" type="submit">SEND</button>
               </div>
