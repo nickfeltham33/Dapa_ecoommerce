@@ -63,7 +63,7 @@ export const StateContext = ({ children }) => {
     console.log("EXTRA");
    }
    else {
-    console.log("Fuck Knows!");
+    console.log("F%@$ Knows!");
    }
 
   }

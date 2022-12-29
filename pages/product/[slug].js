@@ -19,14 +19,14 @@ const ProductDetails = ({ product, products}) => {
         </div>
         <div className="product__left__wrap">
           <div className="img__container">
-            <img className="product__img__main" src={urlFor(image && image[index])} />
+            <img className="product__img__main" key={product._id} src={urlFor(image && image[index])} />
           </div>
           <div className="product__lower__wrap">
             <div className="thumbnail__wrap">
               {image?.map((item, i) => (
               <img 
                 src={urlFor(item)}
-                key={i}
+                key={item._key + i}
                 className={i === index ? "thumbnail__img selected__img" : "thumbnail__img"}
                 onMouseEnter={() => setIndex(i)}
               />
@@ -51,7 +51,7 @@ const ProductDetails = ({ product, products}) => {
             </div>
             <div className="sizes__wrap">
               {sizes?.map(
-                  (size) => <input type="button" className="product__sizes" value={size} onClick={() => setProdSize(size)}/>)}
+                  (size) => <input type="button" key={size} className="product__sizes" value={size} onClick={() => setProdSize(size)}/>)}
             </div> 
             <div className="button__wrap">
               <button className="cart__btn add__to__cart" onClick={() => onAdd(product, qty)}>ADD TO CART</button>

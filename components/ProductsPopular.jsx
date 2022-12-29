@@ -12,7 +12,7 @@ const Products = ({products}) => {
           </div>
             <div className="grid__container">
               {products.slice(0,4).map((item) => (
-              <Product key={item._key} 
+              <Product key={item._id} 
               product={item} />
               ))}
           </div>
