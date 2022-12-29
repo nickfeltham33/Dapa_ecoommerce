@@ -9,9 +9,12 @@ export const StateContext = ({ children }) => {
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalQuantities, setTotalQuantities] = useState(0);
   const [qty, setQty] = useState(1);
+  const [size, setSize] = useState('M');
+
 
   let foundProduct;
   let index;
+  let productSize;
 
   const onAdd = (product, quantity) => {
     const checkProductInCart = cartItems.find((item) => item._id === product._id);
@@ -44,6 +47,25 @@ export const StateContext = ({ children }) => {
     setTotalPrice((prevTotalPrice) => prevTotalPrice -foundProduct.price * foundProduct.quantity);
     setTotalQuantities(prevTotalQuantities => prevTotalQuantities - foundProduct.quantity);
     setCartItems(newCartItems);
+  }
+
+  const setProdSize = (size) => {
+   if(size === "S") {
+    console.log("SMALL");
+   }
+   else if(size === "M") {
+    console.log("MEDIUM");
+   }
+   else if (size === "L") {
+    console.log("LARGE");
+   }
+   else if (size === "XL") {
+    console.log("EXTRA");
+   }
+   else {
+    console.log("Fuck Knows!");
+   }
+
   }
 
   const toggleCartItemQuanitity = (id, value) => {
@@ -104,6 +126,7 @@ export const StateContext = ({ children }) => {
         onAdd,
         toggleCartItemQuanitity,
         onRemove,
+        setProdSize,
         setCartItems,
         setTotalPrice,
         setTotalQuantities 

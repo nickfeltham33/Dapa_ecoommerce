@@ -7,11 +7,32 @@ import toast from 'react-hot-toast';
 
 import { useStateContext } from '../context/StateContext';
 import { urlFor } from '../lib/client';
+import getStripe from  '../lib/getStripe';
 
 
 const Cart = () => {
   const cartRef = useRef();
-  const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove  } = useStateContext();
+  const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove, setProdSize  } = useStateContext();
+
+  const handleCheckout = async () => {
+    const stripe = await getStripe();
+
+    const response = await fetch('/api/stripe', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(cartItems),
+    });
+
+    if(response.statusCode === 500) return;
+    
+    const data = await response.json();
+
+    toast.loading('Redirecting...');
+
+    stripe.redirectToCheckout({ sessionId: data.id });
+  }
 
   return (
     <div className="cart__wrapper" ref={cartRef}>
@@ -38,6 +59,7 @@ const Cart = () => {
         <div className="product__container">
           {cartItems.length >= 1 && cartItems.map((item, index) => (
             <div className="cart__product__wrap" key={item._id}>
+             {console.log(item)}
               <img src={urlFor(item?.image[0])} className="cart__product__img" />
               <div className="cart__side__wrap">
                 <div className="cart__product__name">{item.name}</div>
@@ -63,7 +85,7 @@ const Cart = () => {
               <h3 className="subtotal">Subtotal:</h3>
               <h3 className="subtotal">£{totalPrice.toFixed(2)}</h3>
             </div>
-            <button className="checkout__btn">Pay With Stripe</button>
+            <button className="checkout__btn" onClick={handleCheckout}>Pay With Stripe</button>
           </div>
         )}
       </div>
